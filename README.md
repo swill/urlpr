@@ -1,5 +1,7 @@
-INSTALL
--------
+urlpr
+-----
+
+A very simple webserver that enables files referenced via a URL to be printed on a local printer.  It is currently only compiled for a Mac, but it can be compiled for Linux as well.  It depends on the `lpr` unix style command, so Windows support is not currently built.
 
 **Get the binary**
 ``` bash
