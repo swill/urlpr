@@ -1,0 +1,57 @@
+
+{{define "head_includes"}}
+  <!-- Add Styles and JS as needed -->
+{{end}}
+
+
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Title}} - swillkb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{template "head_includes" .}}
+  </head>
+  <body>
+    <form action="/print">
+       Print URL <input type="text" name="url"> with `lpr` options <input type="text" name="opts" placeholder="eg: -o media=letter"> <input type="submit" value="Print">
+    </form>
+  </body>
+</html>
+{{end}}
+
+
+{{define "print"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Title}} - swillkb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{template "head_includes" .}}
+  </head>
+  <body>
+    Print job has been submitted...
+  </body>
+</html>
+{{end}}
+
+
+{{define "error"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Title}} - swillkb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{template "head_includes" .}}
+  </head>
+  <body>
+    <b>{{.Title}} ({{.ErrorCode}}) :</b> {{.ErrorDesc}}
+  </body>
+</html>
+{{end}}
