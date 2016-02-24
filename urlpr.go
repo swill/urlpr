@@ -21,7 +21,7 @@ type PageError struct {
 
 var (
 	templates *template.Template
-	port      = flag.Int("port", 8383, "The port the pm_search app should listen on")
+	port      = flag.Int("port", 8383, "The port the urlpr app should listen on")
 )
 
 func main() {
